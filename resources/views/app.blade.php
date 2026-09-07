@@ -184,9 +184,9 @@
                 <li><a href="{{ url('category') }}">Category</a></li>
                 <li><a href="{{ url('setting') }}">Setting</a></li>
             @endif
-            <li><a href="{{ url('setting') }}"
-                    onclick="event.preventDefault();document.getElementById('logout').submit()">Logout</a></li>
-            <form action="{{ route('logout') }}" method="post" id="logout" class="d-none"></form>
+            <li><a onclick="event.preventDefault();document.getElementById('logout').submit()">Logout</a>
+                <form action="{{ route('logout') }}" method="post" id="logout" class="d-none">@csrf</form>
+            </li>
         </ul>
     </aside>
 
